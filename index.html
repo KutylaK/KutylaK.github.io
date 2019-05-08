@@ -14,10 +14,8 @@
     console.log(response);
 
     if (response.status === 'connected') {
-      // Logged into your app and Facebook.
       testAPI();
     } else {
-      // The person is not logged into your app or we are unable to tell.
       document.getElementById('status').innerHTML = 'Please log ' +
         'into this app.';
     }
@@ -33,10 +31,10 @@
   window.fbAsyncInit = function() {
     FB.init({
       appId      : '677096949385874',
-      cookie     : true,  // enable cookies to allow the server to access 
-                          // the session
-      xfbml      : true,  // parse social plugins on this page
-      version    : 'v3.3' // The Graph API version to use for the call
+      cookie     : true, 
+                          
+      xfbml      : true,  
+      version    : 'v3.3' 
     });
 
     FB.getLoginStatus(function(response) {
@@ -45,7 +43,6 @@
 
   };
 
-  // Load the SDK asynchronously
   (function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
@@ -67,9 +64,8 @@
 <div class="logged">
     <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
     </fb:login-button>
-</div>
-
-<div id="status">
+    <div id="status">
+    </div>
 </div>
 
     <div class="content">
