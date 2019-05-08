@@ -2,6 +2,10 @@
     display: none;
 }
 
+.logged{
+	background-color: white;
+}
+
 body{
 	background-image: url('sggw_back.jpg');
         background-repeat: no-repeat;
